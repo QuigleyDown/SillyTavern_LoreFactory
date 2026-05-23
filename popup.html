@@ -1,0 +1,81 @@
+<div class="lore-factory-container">
+    <!-- Header with Mode Selector and Action Buttons -->
+    <div class="lore-factory-header">
+        <div class="lf-mode-group">
+            <input type="radio" name="lf-mode" id="lf-mode-json" value="json" checked style="display:none;">
+            <label for="lf-mode-json" class="lf-mode-btn">JSON</label>
+            
+            <input type="radio" name="lf-mode" id="lf-mode-csv" value="csv" style="display:none;">
+            <label for="lf-mode-csv" class="lf-mode-btn">CSV / Excel</label>
+        </div>
+        
+        <div class="lf-action-group">
+            <div id="lore-factory-template-btn" class="menu_button interactable" title="Insert Template">
+                <i class="fa-solid fa-file-code"></i> <span>Template</span>
+            </div>
+            <div id="lore-factory-format-btn" class="menu_button interactable" title="Format JSON">
+                <i class="fa-solid fa-indent"></i> <span>Format</span>
+            </div>
+            <div id="lore-factory-clear-btn" class="menu_button interactable" title="Clear Input">
+                <i class="fa-solid fa-trash-can"></i> <span>Clear</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Batch Settings Panel -->
+    <div class="lf-settings-panel">
+        <div class="lf-settings-title">Batch Overrides</div>
+        
+        <div class="lf-settings-grid">
+            <div class="lf-settings-row">
+                <label class="lf-checkbox-label" title="Enable batch overrides">
+                    <input type="checkbox" id="lf-override-enable">
+                    <span>Enable Overrides</span>
+                </label>
+                <label class="lf-checkbox-label" title="Force entry to be constant">
+                    <input type="checkbox" id="lf-set-constant">
+                    <span>Constant</span>
+                </label>
+                <label class="lf-checkbox-label" title="Enable selective logic">
+                    <input type="checkbox" id="lf-set-selective" checked>
+                    <span>Selective</span>
+                </label>
+            </div>
+            
+            <div class="lf-settings-row">
+                <div class="lf-input-field">
+                    <span>Depth:</span>
+                    <input type="number" id="lf-set-depth" value="4" min="0" max="99">
+                </div>
+                <div class="lf-input-field">
+                    <span>Prob %:</span>
+                    <input type="number" id="lf-set-prob" value="100" min="0" max="100">
+                </div>
+                <label class="lf-checkbox-label" title="Merge existing entries by Title">
+                    <input type="checkbox" id="lf-merge-mode" checked>
+                    <span>Smart Merge</span>
+                </label>
+                <label class="lf-checkbox-label" title="Auto-fill keywords from Title">
+                    <input type="checkbox" id="lf-auto-key" checked>
+                    <span>Auto-Key</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    
+    <textarea id="lore-factory-input" placeholder="Paste your data here..."></textarea>
+
+    <!-- Preview -->
+    <div id="lore-factory-preview" class="lf-preview-area">
+        <div class="lf-preview-header">Detected Entries (<span id="lf-preview-count">0</span>)</div>
+        <div id="lf-preview-list" class="lf-preview-list"></div>
+    </div>
+
+    <div id="lore-factory-status" class="lf-status-msg"></div>
+
+    <div class="lf-footer">
+        <div id="lore-factory-process-btn" class="menu_button interactable lf-primary-btn">
+            <i class="fa-solid fa-bolt"></i> <strong>Inject into Lorebook</strong>
+        </div>
+    </div>
+</div>

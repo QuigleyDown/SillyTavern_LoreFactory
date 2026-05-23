@@ -1,0 +1,67 @@
+.lore-factory-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.lore-factory-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lore-factory-header p {
+    margin: 0;
+}
+
+.lore-factory-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.lore-factory-actions .tiny {
+    padding: 2px 8px;
+    font-size: 0.8em;
+}
+
+#lore-factory-input {
+    width: 100% !important;
+    min-height: 500px !important;
+    height: 500px !important;
+    background-color: var(--black75a) !important;
+    color: var(--mainColor) !important;
+    border: 1px solid var(--grey60) !important;
+    padding: 10px !important;
+    font-family: monospace !important;
+    display: block !important;
+    resize: vertical !important;
+}
+
+.lore-factory-status {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    display: none;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.lore-factory-error {
+    color: #ff4d4d;
+    background-color: rgba(255, 77, 77, 0.1);
+    border: 1px solid #ff4d4d;
+}
+
+.lore-factory-success {
+    color: #4dff4d;
+    background-color: rgba(77, 255, 77, 0.1);
+    border: 1px solid #4dff4d;
+}
+
+.lore-factory-footer {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}

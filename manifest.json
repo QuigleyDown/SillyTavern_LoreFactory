@@ -1,0 +1,11 @@
+{
+    "id": "SillyTavern_LoreFactory",
+    "display_name": "LoreFactory",
+    "version": "1.0.0",
+    "author": "QuigleyDown",
+    "description": "Batch add lorebook entries from JSON.",
+    "loading_order": 100,
+    "js": "index.js",
+    "requires": [],
+    "optional": []
+}
